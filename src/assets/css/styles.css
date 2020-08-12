@@ -127,13 +127,27 @@ header h1{
     text-align: start;
     padding: 10px;
     border-bottom: 1px solid #c3c3c3;
+    overflow-wrap: break-word;
 }
 
-@media (max-width: 640px){
+@media (max-width: 1105px){
     .item #todo{
-        width: 80%;
+        width: 85%;
     }   
 }
+
+@media (max-width: 750px){
+    .item #todo{
+        width: 70%;
+    }   
+}
+
+@media (max-width: 410px){
+    .item #todo{
+        width: 60%;
+    }   
+}
+
 
 .item #img{
     max-width: 25px;
@@ -141,6 +155,7 @@ header h1{
     cursor: pointer;
     transition: 300ms all;
     padding-top: 10px;
+    padding-right: 5px;
 }
 
 .item #img:hover{

@@ -37,6 +37,7 @@
         <div class="item" *ngFor="let todo of darrTodoList; index as i">
             <div id="todo">{{(i + 1)}}. {{todo}}</div>
             <div><img id="img" src="../assets/img/remove.svg" title="Eliminar tarea" (click)="eliminarTarea(i)" /></div>
+            <div><img id="img" src="../assets/img/lapiz.svg" title="Editar tarea" (click)="editarTarea(todo,i)" /></div>
         </div>
       </div>
       <!-------------------------------------------------------------------------------------------------------------->   

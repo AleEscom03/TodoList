@@ -44,6 +44,12 @@ export class AppComponent implements OnInit{
     }
   }
 
+  editarTarea(strTareaUp:string,intIndice:string)
+  {
+      let strUpdateTarea = prompt("Editar Tarea",strTareaUp);
+      this.darrTodoList[Number.parseInt(intIndice)] = strUpdateTarea;
+  }
+
   eliminarTarea(intIndice:Number)
   {
     //                                                        //    Devolver un arreglo con todos los elementos 
