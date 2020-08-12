@@ -24,7 +24,7 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "src/assets/css/styles.css"
             ],
             "scripts": []
           },
@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "AppToDoList"
+    }
+  },
+  "defaultProject": "AppToDoList",
+  "cli": {
+    "analytics": "6286bfcb-62ab-48a9-8dd8-4c084e3f3aef"
+  }
 }

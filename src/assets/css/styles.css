@@ -1,0 +1,148 @@
+/* GENERALES */
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    background: rgb(45,253,251);
+    background: linear-gradient(351deg, rgba(45,253,251,1) 19%, rgba(53,215,23,1) 78%);
+    background-attachment: fixed;
+}
+
+.clearfix{
+    float: none;
+    clear: both;
+}
+
+/* HEADER */
+header{
+    text-align: center;
+}
+
+header img{
+    max-width: 70px;
+}
+
+header h1{
+    font-size: 25px;
+    color: white;
+}
+
+/* CONTENIDO*/
+.content{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    align-items: center;
+    height: auto;
+    width: 75%;
+    margin: 0px auto;
+    padding-top: 40px;
+}
+
+.content div{
+    margin: auto 0px;
+    width: 100%;
+}
+
+.content div input{
+    width: 80%;
+    margin-right: 15px;
+    font-size: 20px;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid #c3c3c3;
+    color: white;
+    outline: none;
+    transition: 300ms all;
+}
+
+.content div input:focus{
+    border-bottom: 1px solid #3c3c3c;
+}
+
+.content div input::placeholder{
+    color: white;
+}
+
+.content div button{
+    border: none;
+    padding-right: 30px;
+    padding-left: 30px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: rgb(6, 147, 172);
+    color: white;
+    cursor: pointer;
+    transition: 100ms all;
+}
+
+.content div button:hover{
+    transform: scale(1.2);
+    background-color: rgb(5, 69, 80);
+}
+
+/* Todo List */
+.title-bar{
+    margin-top: 20px !important;
+    background-color: rgb(44, 241, 37);
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+    padding: 15px;
+}
+
+.title-bar p{
+    font-size: 15px;
+    display: inline;
+    float: left;
+}
+
+.title-bar img{
+    max-width: 35px;
+    max-width: 35px;
+    float: right;
+    cursor: pointer;
+    transition: 300ms all;
+}
+
+.title-bar img:hover{
+    transform: scale(1.5);
+}
+
+.todoList{
+    background-color: white;
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    padding: 15px;
+    text-align: center;
+}
+
+
+.item #todo{
+    float: left;
+    width: 90%;
+    text-align: start;
+    padding: 10px;
+    border-bottom: 1px solid #c3c3c3;
+}
+
+@media (max-width: 640px){
+    .item #todo{
+        width: 80%;
+    }   
+}
+
+.item #img{
+    max-width: 25px;
+    float: right;
+    cursor: pointer;
+    transition: 300ms all;
+    padding-top: 10px;
+}
+
+.item #img:hover{
+    transform: scale(1.5);
+}
