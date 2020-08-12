@@ -32,12 +32,28 @@
       </div>
       <!-------------------------------------------------------------------------------------------------------------->   
 
-      <!-- LISTA CON ELEMENTOS---------------------------------------------------------------------------------------->   
+      <!-- LISTA CON ELEMENTOS Y BOTONES DE MODIFICACIÓN Y BORRADO---------------------------------------------------->   
       <div class="list" *ngIf="!boolTodoListVacia">
         <div class="item" *ngFor="let todo of darrTodoList; index as i">
-            <div id="todo">{{(i + 1)}}. {{todo}}</div>
-            <div><img id="img" src="../assets/img/remove.svg" title="Eliminar tarea" (click)="eliminarTarea(i)" /></div>
-            <div><img id="img" src="../assets/img/lapiz.svg" title="Editar tarea" (click)="editarTarea(todo,i)" /></div>
+            <div id="item{{(i)}}" class="show">
+              <div class="itemText" id="todo">{{(i + 1)}}. {{todo}}</div>
+            </div>
+            <div id="itemVis{{(i)}}" class="hidden">
+              <input class="itemText" (keyup.enter)="guardarTarea(todo,i)" type="text" id="input{{(i)}}"
+               [(ngModel)]="strTareaModif"/>
+            </div>
+              <div>
+                <img id="img" class="img" src="../assets/img/remove.svg" title="Eliminar tarea"
+                       (click)="eliminarTarea(i)" />
+              </div>
+              <div>
+                <img id="imgEdit{{i}}" class="img show" src="../assets/img/lapiz.svg" title="Editar tarea"
+                       (click)="editarTarea(todo,i)" />
+              </div>
+              <div>
+                <img id="imgGuarda{{i}}" class="img hidden" src="../assets/img/salvar.svg" title="Guardar tarea" 
+                (click)="guardarTarea(todo,i)"/>
+              </div>
         </div>
       </div>
       <!-------------------------------------------------------------------------------------------------------------->   

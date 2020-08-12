@@ -120,36 +120,39 @@ header h1{
     text-align: center;
 }
 
-
-.item #todo{
-    float: left;
+.item{
     width: 90%;
+}
+
+.itemText{
+    float: left;
+    width: 90% !important;
     text-align: start;
     padding: 10px;
     border-bottom: 1px solid #c3c3c3;
     overflow-wrap: break-word;
+    color: black !important;
 }
 
 @media (max-width: 1105px){
-    .item #todo{
-        width: 85%;
+    .itemText{
+        width: 85% !important;
     }   
 }
 
 @media (max-width: 750px){
-    .item #todo{
-        width: 70%;
+    .itemText{
+        width: 70% !important;
     }   
 }
 
 @media (max-width: 410px){
-    .item #todo{
-        width: 60%;
+    .itemText{
+        width: 60% !important;
     }   
 }
 
-
-.item #img{
+.item .img{
     max-width: 25px;
     float: right;
     cursor: pointer;
@@ -158,6 +161,14 @@ header h1{
     padding-right: 5px;
 }
 
-.item #img:hover{
+.item .img:hover{
     transform: scale(1.5);
+}
+
+.hidden{
+    display: none;
+}
+
+.show{
+    display: block;
 }

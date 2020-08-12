@@ -15,11 +15,14 @@ export class AppComponent implements OnInit{
   //                                                        //Tarea que se añadira a la lista
   public strTarea:String;
 
+  public strTareaModif:String;
+
   constructor(){
     this.strTitulo = "Frontend Test";
     this.darrTodoList = [];
     this.boolTodoListVacia = this.isboolTodoListVacia();
     this.strTarea = "";
+    this.strTareaModif = "";
   }
   
   ngOnInit(){
@@ -46,8 +49,22 @@ export class AppComponent implements OnInit{
 
   editarTarea(strTareaUp:string,intIndice:string)
   {
-      let strUpdateTarea = prompt("Editar Tarea",strTareaUp);
-      this.darrTodoList[Number.parseInt(intIndice)] = strUpdateTarea;
+      //                                                        //    Guardar la tarea a modificar.
+      //                                                        //    Esconder botón de editar y
+      //                                                        //    mostrar botón de guardar.
+      this.strTareaModif = strTareaUp;
+      document.querySelector("#item"+intIndice).className = 'hidden';
+      document.querySelector("#itemVis"+intIndice).className = 'show';
+      document.getElementById("itemVis"+intIndice).focus();
+      document.querySelector("#imgEdit"+intIndice).className = 'hidden'
+      document.querySelector("#imgGuarda"+intIndice).classList.remove('hidden');
+      document.querySelector("#imgGuarda"+intIndice).classList.add('img','show');
+  }
+
+  guardarTarea(strTareaUp:string,intIndice:string){
+    //                                                        //    Guardar tarea en su respectiva posición de la lista
+    this.darrTodoList[Number.parseInt(intIndice)] = this.strTareaModif;
+    this.strTareaModif = "";
   }
 
   eliminarTarea(intIndice:Number)
